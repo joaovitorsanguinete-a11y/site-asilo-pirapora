@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lar dos Idosos de São Vicente de Paulo - Pirapora/MG</title>
+    <!-- Versão 5 para limpar o cache automaticamente -->
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Lar dos Idosos SSVP" class="img-logo">
+            <div class="logo-text">
+                <h2>Lar dos Idosos SSVP</h2>
+                <span>Pirapora - MG</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre">A Instituição</a></li>
+                <li><a href="#como-ajudar">Doações</a></li>
+                <li><a href="#visitas">Visitas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="#como-ajudar" class="btn-doar-nav">DOAR AGORA</a>
+    </header>
+
+    <!-- BANNER PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Acolhimento e Assistência Social na Terceira Idade</h1>
+            <p>Desde 1993, o Lar dos Idosos de São Vicente de Paulo promove qualidade de vida, proteção integral e resgate da dignidade para idosos de Pirapora e região.</p>
+            <div class="hero-buttons">
+                <a href="#como-ajudar" class="btn-primary">Como Contribuir</a>
+                <a href="#visitas" class="btn-secondary">Horários de Visita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO A INSTITUIÇÃO -->
+    <section id="sobre" class="section container">
+        <div class="section-header">
+            <h2>Nossa Missão, História e Estrutura</h2>
+            <div class="linha-destaque"></div>
+            <p>Somos uma Organização da Sociedade Civil (OSC) filantrópica dedicada ao acolhimento institucional de idosos a partir de 60 anos, em situação de vulnerabilidade.</p>
+        </div>
+        
+        <div class="historia-detalhada">
+            <div class="texto-historia">
+                <h3>Uma História de Fé, Cuidado e Comunidade</h3>
+                <p>Nossa trajetória de acolhimento evoluiu imensamente desde as modestas casinhas brancas de janelas azuis que formavam o "Antigo Asilo". Hoje, oferecemos uma estrutura ampla, acessível e segura. Nossa recepção, que preserva nossa forte raiz vicentina com oratórios dedicados a Antônio Frederico Ozanam e São Vicente de Paulo, é a porta de entrada para um ambiente focado no bem-estar integral.</p>
+                
+                <p>A instituição conta com espaços estrategicamente sinalizados e divididos para garantir o melhor atendimento, incluindo Ala Masculina, Fisioterapia, Consultório Médico e Sala de Jogos. Além da segurança dos ambientes internos, nossos residentes têm livre acesso a uma belíssima e extensa área externa. O espaço conta com jardins arborizados, calçamentos acessíveis e um rico pomar repleto de mamoeiros e bananeiras, proporcionando contato constante com a natureza e tranquilidade.</p>
+
+                <p>O maior patrimônio do Lar dos Idosos, no entanto, é a vida que pulsa aqui dentro. Nossos corredores abrigam murais repletos de fotografias que narram décadas de memórias felizes: o convívio diário, as confraternizações, os aniversários e as inesquecíveis festas de Natal celebradas com a presença e o carinho constante da comunidade.</p>
+            </div>
+        </div>
+
+        <!-- GALERIA DE FOTOS -->
+        <div class="galeria-fotos">
+            <h3>Conheça Nosso Espaço</h3>
+            <div class="grid-galeria">
+                <img src="pintura_antigo.jpeg" alt="Pintura do Antigo Asilo" loading="lazy">
+                <img src="recepcao.jpeg" alt="Recepção e Área Interna" loading="lazy">
+                <img src="vicentinos.jpeg" alt="Oratórios Vicentinos" loading="lazy">
+                <img src="externa.jpeg" alt="Área Externa e Jardins" loading="lazy">
+                <img src="pomar.jpeg" alt="Pomar e Área Verde" loading="lazy">
+                <img src="interno.jpeg" alt="Área Interna" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMO AJUDAR / DOAÇÕES -->
+    <section id="como-ajudar" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Apoiar o Lar</h2>
+                <div class="linha-destaque"></div>
+                <p>A manutenção dos nossos serviços gratuitos conta com o apoio da comunidade. Suas doações podem ser entregues na sede ou recolhidas por nossa equipe.</p>
+            </div>
+
+            <div class="grid-doacoes">
+                <!-- CARD PIX COM QR CODE -->
+                <div class="card-doar destaque">
+                    <div class="tag-recomendado">Mais Rápido</div>
+                    <h3>📱 Contribuição via PIX</h3>
+                    
+                    <p style="text-align: center; margin-top: 15px;">Escaneie o QR Code abaixo com o app do seu banco:</p>
+                    
+                    <!-- IMAGEM DO QR CODE -->
+                    <img src="qrcode.png" alt="QR Code PIX Asilo São Vicente" class="img-qrcode">
+                    
+                    <p style="text-align: center;">Ou, se preferir, utilize nossa chave CNPJ:</p>
+                    <div class="pix-box">
+                        <span id="chavePix">18.890.772/0001-01</span>
+                    </div>
+                    <button onclick="copiarPix()" class="btn-copiar" id="btnCopiar">Copiar Chave CNPJ</button>
+                </div>
+
+                <!-- CARD MATERIAIS -->
+                <div class="card-doar">
+                    <h3>📦 Itens de Necessidade</h3>
+                    <p>Recebemos doações contínuas. Os itens de maior utilidade atualmente são:</p>
+                    <ul class="dados-bancarios">
+                        <li>Fraldas Geriátricas</li>
+                        <li>Alimentos não perecíveis</li>
+                        <li>Produtos de higiene pessoal</li>
+                        <li>Materiais de limpeza</li>
+                    </ul>
+                </div>
+
+                <!-- CARD VOLUNTARIADO -->
+                <div class="card-doar">
+                    <h3>🤝 Voluntariado</h3>
+                    <p>O carinho e a presença transformam vidas. Para se tornar um voluntário e alinhar atividades, entre em contato diretamente com a nossa direção presencialmente ou pelo WhatsApp institucional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO HORÁRIOS E VISITAS -->
+    <section id="visitas" class="section container">
+        <div class="visitas-wrapper">
+            <div class="visitas-info">
+                <h2>Horários de Visitação</h2>
+                <p>Mantemos uma política de acesso aberto e receptivo. Não é necessário realizar agendamento prévio, basta comparecer à instituição dentro do horário.</p>
+                
+                <div class="quadro-horarios">
+                    <p>🕒 <strong>Visitas Abertas: Todos os dias, das 14:00h às 16:00h.</strong></p>
+                </div>
+                
+                <div class="avisos-visita">
+                    <p>⚠️ <strong>Orientações Importantes:</strong></p>
+                    <ul>
+                        <li>O portão de acesso é liberado pontualmente no horário informado.</li>
+                        <li>A convivência social com a comunidade é fundamental para a saúde emocional dos nossos residentes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Canais de Comunicação</h2>
+                <div class="linha-destaque"></div>
+                <p>Para dúvidas administrativas ou informações sobre o recolhimento de doações, fale com a direção através dos nossos contatos oficiais.</p>
+            </div>
+            
+            <div class="grid-contato-cards">
+                <div class="card-contato">
+                    <div class="icon-contato">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Rua Camilo dos Santos, 194<br>Santos Dumont - Pirapora/MG<br>CEP: 39274-158</p>
+                </div>
+                
+                <div class="card-contato">
+                    <div class="icon-contato">📞</div>
+                    <h3>Telefone / WhatsApp</h3>
+                    <p class="telefone-texto">Atendimento Institucional:</p>
+                    <!-- Link direto para o WhatsApp -->
+                    <a href="https://wa.me/553837411978" target="_blank" class="btn-whatsapp">
+                        (38) 3741-1978
+                    </a>
+                </div>
+
+                <div class="card-contato">
+                    <div class="icon-contato">✉️</div>
+                    <h3>E-mail</h3>
+                    <p class="email-texto"><strong>laridosos.pirapora@hotmail.com</strong></p>
+                    <p>Dúvidas gerais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container rodape-conteudo">
+            <p><strong>Lar dos Idosos de São Vicente de Paulo</strong></p>
+            <p>Entidade Beneficente de Assistência Social | CNPJ: 18.890.772/0001-01</p>
+            <p>&copy; <span id="anoAtual"></span> Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

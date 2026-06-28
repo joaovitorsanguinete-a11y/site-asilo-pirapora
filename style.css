@@ -1,0 +1,505 @@
+/* RESET E FONTES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul-principal: #004b87; /* Azul forte da logo */
+    --azul-claro: #0073cc;
+    --amarelo-destaque: #f5a623; /* Amarelo/Laranja para botões de doação */
+    --texto-escuro: #333333;
+    --texto-cinza: #666666;
+    --fundo-cinza: #f8f9fa;
+}
+
+body {
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* NAVBAR E LOGO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-logo {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text h2 {
+    color: var(--azul-principal);
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+.logo-text span {
+    font-size: 0.8rem;
+    color: var(--texto-cinza);
+    font-weight: 500;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--azul-claro);
+}
+
+.btn-doar-nav {
+    background-color: var(--amarelo-destaque);
+    color: #ffffff;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-doar-nav:hover {
+    background-color: #d98d1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(245, 166, 35, 0.3);
+}
+
+/* HERO SECTION (FOTO DA FACHADA) */
+.hero {
+    background: linear-gradient(rgba(0, 75, 135, 0.8), rgba(0, 45, 80, 0.9)), 
+                url("fachada.jpeg") center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    color: #e0e0e0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--amarelo-destaque);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #d98d1a;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--azul-principal);
+}
+
+/* SEÇÕES GENÉRICAS */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--fundo-cinza);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    color: var(--azul-principal);
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.linha-destaque {
+    width: 60px;
+    height: 4px;
+    background-color: var(--amarelo-destaque);
+    margin: 0 auto 20px auto;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.15rem;
+    color: var(--texto-cinza);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* BLOCO HISTÓRIA DETALHADA */
+.historia-detalhada {
+    background-color: #f0f7ff;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    border-left: 6px solid var(--amarelo-destaque);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.historia-detalhada h3 {
+    color: var(--azul-principal);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.historia-detalhada p {
+    color: var(--texto-escuro);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* GALERIA DE FOTOS */
+.galeria-fotos {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.galeria-fotos h3 {
+    color: var(--azul-principal);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-galeria img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* CARDS DOAÇÕES */
+.grid-doacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-doar {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    position: relative;
+}
+
+.card-doar.destaque {
+    border: 2px solid var(--azul-claro);
+}
+
+.tag-recomendado {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--azul-claro);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.card-doar h3 {
+    color: var(--azul-principal);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card-doar p {
+    color: var(--texto-cinza);
+}
+
+/* ESTILO DO QR CODE PIX */
+.img-qrcode {
+    width: 160px;
+    height: 160px;
+    margin: 15px auto;
+    display: block;
+    border: 3px solid var(--azul-claro);
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 115, 204, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.img-qrcode:hover {
+    transform: scale(1.05);
+}
+
+.pix-box {
+    background-color: #f0f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--azul-principal);
+    margin: 15px 0 25px 0;
+    border: 1px dashed var(--azul-claro);
+}
+
+.btn-copiar {
+    background-color: var(--azul-claro);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-copiar:hover {
+    background-color: var(--azul-principal);
+}
+
+.dados-bancarios {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.dados-bancarios li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--texto-escuro);
+    font-weight: 500;
+}
+
+.dados-bancarios li::before {
+    content: "✓";
+    color: var(--amarelo-destaque);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* VISITAS */
+.visitas-wrapper {
+    background-color: var(--azul-principal);
+    color: #ffffff;
+    padding: 60px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.visitas-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.visitas-info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.quadro-horarios {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.quadro-horarios p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.avisos-visita {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.15);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.avisos-visita ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* CONTATO E BOTÕES */
+.grid-contato-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card-contato {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.icon-contato {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card-contato h3 {
+    color: var(--azul-principal);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-contato p {
+    color: var(--texto-cinza);
+    line-height: 1.8;
+}
+
+/* Correção da quebra do e-mail */
+.email-texto {
+    word-break: break-all; 
+    font-size: 1.05rem;
+    margin: 10px 0;
+    color: var(--azul-principal);
+}
+
+/* Estilo do Botão do WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.telefone-texto {
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #002645;
+    color: #a0b2c1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer strong {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-buttons { flex-direction: column; }
+    .visitas-wrapper { padding: 40px 20px; }
+}
