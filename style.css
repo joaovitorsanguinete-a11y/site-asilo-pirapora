@@ -494,12 +494,61 @@ footer strong {
     font-size: 1.2rem;
 }
 
-/* RESPONSIVIDADE */
+/* --- RESPONSIVIDADE TOTAL PARA CELULARES --- */
 @media (max-width: 850px) {
-    .nav-links {
-        display: none;
+    /* Esconde o menu do topo para não amontoar */
+    .nav-links { 
+        display: none; 
     }
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-buttons { flex-direction: column; }
-    .visitas-wrapper { padding: 40px 20px; }
+    
+    /* Ajusta o banner inicial */
+    .hero {
+        height: auto;
+        padding: 100px 20px 60px 20px;
+    }
+    .hero-content h1 { 
+        font-size: 2rem; 
+    }
+    
+    /* Faz os botões ocuparem a tela toda no celular */
+    .hero-buttons { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    .btn-primary, .btn-secondary, .btn-whatsapp, .btn-copiar {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Reduz os espaços gigantes entre as seções */
+    .section {
+        padding: 50px 0;
+    }
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Ajusta os textos longos para caberem na tela */
+    .historia-detalhada {
+        padding: 25px 15px;
+    }
+    
+    /* Força a galeria a mostrar uma foto por vez embaixo da outra */
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    /* Diminui o QR Code para não vazar da tela */
+    .img-qrcode {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Ajusta a caixa de visitas */
+    .visitas-wrapper { 
+        padding: 30px 15px; 
+    }
+    .quadro-horarios p {
+        font-size: 1.1rem;
+    }
 }
