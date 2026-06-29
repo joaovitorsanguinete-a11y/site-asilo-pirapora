@@ -496,58 +496,54 @@ footer strong {
 
 /* --- RESPONSIVIDADE TOTAL PARA CELULARES --- */
 @media (max-width: 850px) {
-    /* 1. ARRUMANDO O CABEÇALHO (NAVBAR) */
+    /* 1. CABEÇALHO VERTICAL ORGANIZADO */
     .navbar {
-        flex-wrap: wrap; /* Permite que os elementos desçam de linha */
-        padding: 10px 15px;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 15px; /* Espaço igual entre logo, menu e botão */
     }
     
     .logo {
-        flex: 1; /* Ocupa o espaço necessário */
+        justify-content: center;
+        width: 100%;
     }
     
-    .logo-text h2 {
-        font-size: 1.1rem; /* Diminui a fonte da logo para dar espaço */
-    }
-    
-    .logo-text span {
-        font-size: 0.75rem;
-    }
-
-    /* 2. CONSERTANDO O BOTÃO "DOAR AGORA" ESPREMIDO */
-    .btn-doar-nav {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-        white-space: nowrap; /* Mágica: Obriga o texto a ficar numa linha só, não quebra mais! */
-    }
-
-    /* 3. VOLTANDO COM OS LINKS DO MENU */
+    /* 2. MENU DE LINKS CENTRALIZADO COM BORDAS */
     .nav-links {
-        display: flex; /* Tira o "display: none" antigo */
+        display: flex;
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #eaeaea; /* Coloca uma linha cinza elegante para separar */
+        gap: 10px 20px;
+        margin: 0;
+        padding: 15px 0;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
     }
     
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
     
-    /* Ajusta o banner inicial */
+    /* 3. BOTÃO "DOAR AGORA" ESTILO APLICATIVO */
+    .btn-doar-nav {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1.05rem;
+    }
+
+    /* 4. AJUSTES GERAIS DE SEÇÕES */
     .hero {
         height: auto;
-        padding: 120px 20px 60px 20px;
+        padding: 60px 20px;
     }
     
     .hero-content h1 { 
         font-size: 2rem; 
     }
     
-    /* Faz os botões ocuparem a tela toda no celular */
     .hero-buttons { 
         flex-direction: column; 
         gap: 15px; 
@@ -558,7 +554,6 @@ footer strong {
         text-align: center;
     }
 
-    /* Reduz os espaços gigantes entre as seções */
     .section {
         padding: 50px 0;
     }
@@ -567,23 +562,19 @@ footer strong {
         font-size: 1.8rem;
     }
     
-    /* Ajusta os textos longos para caberem na tela */
     .historia-detalhada {
         padding: 25px 15px;
     }
     
-    /* Força a galeria a mostrar uma foto por vez embaixo da outra */
     .grid-galeria {
         grid-template-columns: 1fr;
     }
 
-    /* Diminui o QR Code para não vazar da tela */
     .img-qrcode {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
     }
 
-    /* Ajusta a caixa de visitas */
     .visitas-wrapper { 
         padding: 30px 15px; 
     }
