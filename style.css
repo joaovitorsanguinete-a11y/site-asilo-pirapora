@@ -496,16 +496,53 @@ footer strong {
 
 /* --- RESPONSIVIDADE TOTAL PARA CELULARES --- */
 @media (max-width: 850px) {
-    /* Esconde o menu do topo para não amontoar */
-    .nav-links { 
-        display: none; 
+    /* 1. ARRUMANDO O CABEÇALHO (NAVBAR) */
+    .navbar {
+        flex-wrap: wrap; /* Permite que os elementos desçam de linha */
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        flex: 1; /* Ocupa o espaço necessário */
+    }
+    
+    .logo-text h2 {
+        font-size: 1.1rem; /* Diminui a fonte da logo para dar espaço */
+    }
+    
+    .logo-text span {
+        font-size: 0.75rem;
+    }
+
+    /* 2. CONSERTANDO O BOTÃO "DOAR AGORA" ESPREMIDO */
+    .btn-doar-nav {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        white-space: nowrap; /* Mágica: Obriga o texto a ficar numa linha só, não quebra mais! */
+    }
+
+    /* 3. VOLTANDO COM OS LINKS DO MENU */
+    .nav-links {
+        display: flex; /* Tira o "display: none" antigo */
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eaeaea; /* Coloca uma linha cinza elegante para separar */
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
     }
     
     /* Ajusta o banner inicial */
     .hero {
         height: auto;
-        padding: 100px 20px 60px 20px;
+        padding: 120px 20px 60px 20px;
     }
+    
     .hero-content h1 { 
         font-size: 2rem; 
     }
@@ -515,6 +552,7 @@ footer strong {
         flex-direction: column; 
         gap: 15px; 
     }
+    
     .btn-primary, .btn-secondary, .btn-whatsapp, .btn-copiar {
         width: 100%;
         text-align: center;
@@ -524,6 +562,7 @@ footer strong {
     .section {
         padding: 50px 0;
     }
+    
     .section-header h2 {
         font-size: 1.8rem;
     }
@@ -548,6 +587,7 @@ footer strong {
     .visitas-wrapper { 
         padding: 30px 15px; 
     }
+    
     .quadro-horarios p {
         font-size: 1.1rem;
     }
